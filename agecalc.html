@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <script language="javascript">
+    function Age() {
+      var bday = parseInt(document.forms[0].txtBday.value);
+      var bmo = (parseInt(document.forms[0].txtBmo.value) - 1);
+      var byr = parseInt(document.forms[0].txtByr.value);
+      var byr;
+      var age;
+      var now = new Date();
+      tday = now.getDate();
+      tmo = (now.getMonth());
+      tyr = (now.getFullYear()); {
+        if ((tmo > bmo) || (tmo == bmo & tday >= bday)) {
+          age = byr
+        } else {
+          age = byr + 1
+        }
+        alert("As of today, " + now + ' \n' + ", you are:" + (tyr - age) + " years old");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <center>
+      Enter your birthday&nbsp;&nbsp;<input type="text" name="txtBday" size="2"><br />
+      Enter your birth Month(1-12)<input type="text" name="txtBmo" size="2"><br />
+      Enter your 4 digit birth year<input type="text" name="txtByr" size="4"><br />
+      <input type="submit" value="submit" onClick="Age()"><input type="reset" value="reset"></center>
+  </form>
+</body>
+
+</html>
